@@ -13,6 +13,11 @@ function App() {
 
   function changeState(event) {
     let inputValue = event.target.value;
+    if (inputValue === "") {
+      setEmoji("");
+      setResult("The emoji meaning will be displayed here.");
+      return;
+    }
     let meaning = emojiDictionary[inputValue];
     if (meaning === undefined) {
       setEmoji("");
