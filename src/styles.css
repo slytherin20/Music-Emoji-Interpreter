@@ -2,25 +2,38 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  overflow-x: hidden;
+}
+html,
+body,
+#root,
+.main-container {
+  height: 100%;
+}
+body {
+  background-image: url("https://i.imgur.com/4FM8bp8.jpg");
+  background-position: center;
+  background-repeat: repeat;
 }
 nav {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: darkslateblue;
-  height: 20px;
-  padding: 2%;
+  padding: 3%;
   text-align: center;
   color: white;
 }
 .main-container {
   display: flex;
   flex-wrap: wrap;
+  width: 75%;
+  margin: auto;
+  background-color: white;
 }
 .input-container,
 .display-emojis {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex-wrap: wrap;
   margin: 5% 5%;
   width: 40%;
@@ -30,6 +43,9 @@ nav {
   border: solid 1px black;
   height: 30px;
 }
+.result-label {
+  color: blue;
+}
 .emoji-list {
   list-style: none;
 }
@@ -38,4 +54,20 @@ nav {
   margin: 2%;
   height: 40px;
   width: 40px;
+}
+.emoji-meaning-display {
+  font-size: 1.5em;
+  color: blue;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .input-container {
+    width: 90%;
+  }
+  .display-emojis {
+    width: 90%;
+  }
+  .main-container {
+    width: 80%;
+  }
 }

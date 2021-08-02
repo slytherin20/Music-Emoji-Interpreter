@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <nav>
-        <h1 className="heading">Music emoji interpreter</h1>
+        <h1 className="heading">Music emoji App</h1>
       </nav>
       <div className="main-container">
         <div className="input-container">

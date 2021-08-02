@@ -13,15 +13,17 @@ function RenderItem({ symbol, displayfunc }) {
 function AppendEmojis({ showName }) {
   return (
     <ul className="emoji-list">
-      {Object.keys(emojiDictionary).map((emoji) => {
-        return (
-          <RenderItem
-            key={emojiDictionary[emoji]}
-            symbol={emoji}
-            displayfunc={showName}
-          />
-        );
-      })}
+      {Object.keys(emojiDictionary)
+        .slice(0, 10)
+        .map((emoji) => {
+          return (
+            <RenderItem
+              key={emojiDictionary[emoji]}
+              symbol={emoji}
+              displayfunc={showName}
+            />
+          );
+        })}
     </ul>
   );
 }
